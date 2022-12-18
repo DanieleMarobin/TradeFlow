@@ -32,6 +32,8 @@ if True:
         df_h=st.session_state['df_h']
     else:
         st.write('Getting data from Google Drive')
+        df_h = gd.read_csv(file_h)
+        df_h=df_h.drop(columns=['HS4 Code']) 
         st.session_state['df_h'] = gd.read_csv(file_h)
         df_h=st.session_state['df_h']
 
@@ -51,11 +53,11 @@ if True:
         gb = GridOptionsBuilder.from_dataframe(df)
         gb.configure_pagination(paginationAutoPageSize=False, paginationPageSize=rows_per_page)
         gb.configure_default_column(groupable=True, value=True, enableRowGroup=True, aggFunc='sum', editable=True,rowMultiSelectWithClick=False)
-        gb.configure_selection('multiple', use_checkbox=True)
+        gb.configure_selection('multiple', use_checkbox=False)
         gb.configure_grid_options(enableRangeSelection=True, statusBar=statusPanels)
         gb.configure_side_bar(defaultToolPanel='test')
 
-        gb.configure_column('trade', headerCheckboxSelection = True, headerCheckboxSelectionFilteredOnly=True)
+        # gb.configure_column('trade', headerCheckboxSelection = True, headerCheckboxSelectionFilteredOnly=True)
         # gb.configure_column('analysis_range', headerCheckboxSelection = True)
         gridOptions = gb.build()
 
