@@ -61,7 +61,7 @@ if True:
         # gb.configure_column('analysis_range', headerCheckboxSelection = True)
         gridOptions = gb.build()
 
-        grid_response = AgGrid(df, gridOptions=gridOptions, data_return_mode=DataReturnMode.FILTERED, update_mode=GridUpdateMode.MANUAL, columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS, enable_enterprise_modules=True)
+        grid_response = AgGrid(df, gridOptions=gridOptions, data_return_mode=DataReturnMode.FILTERED, update_mode=GridUpdateMode.MANUAL, columns_auto_size_mode=ColumnsAutoSizeMode.FIT_ALL_COLUMNS_TO_VIEW, enable_enterprise_modules=True)
         # st.write(grid_response.keys())
         # st.write('selected_rows')
         # st.write(grid_response['selected_rows'])
