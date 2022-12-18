@@ -35,9 +35,7 @@ if True:
         st.write('Getting data from Google Drive')
         df_h = gd.read_csv(file_h)
         df_h=df_h.drop(columns=['HS4 Code'])
-        st.session_state['df_h'] = gd.read_csv(file_h)
-        df_h=st.session_state['df_h']
-
+        st.session_state['df_h'] = df_h
 
 # Table
 if True:
