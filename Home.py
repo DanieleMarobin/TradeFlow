@@ -14,4 +14,10 @@ st.set_page_config(page_title="Trade Flow",layout="wide",initial_sidebar_state="
 st.markdown("# Trade Flow")
 st.markdown("---")
 
+link='Trade Flow: [Trade Flow](https://danielemarobin-tradeflow-home-edl64h.streamlit.app/)'
+st.markdown(link,unsafe_allow_html=True)
+st.markdown(link)
+
+st.write(link)
+
 st.sidebar.markdown("# Trade Flow")
