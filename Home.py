@@ -20,4 +20,5 @@ from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode, DataReturnMode
 st.set_page_config(page_title="Trade Flow",layout="wide",initial_sidebar_state="expanded")
 
 st.markdown("# Trade Flow")
+st.sidebar.markdown("# Trade Flow")
 
