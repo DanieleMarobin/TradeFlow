@@ -22,3 +22,7 @@ st.set_page_config(page_title="Trade Flow",layout="wide",initial_sidebar_state="
 st.markdown("# Trade Flow")
 st.sidebar.markdown("# Trade Flow")
 
+file_h ='Data/GTIS/Corn_Trade_Flow.csv'
+df_h = gd.read_csv(file_h)
+
+st.dataframe(df_h)
